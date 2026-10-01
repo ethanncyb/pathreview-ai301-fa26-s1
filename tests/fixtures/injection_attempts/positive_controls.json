@@ -1,0 +1,16 @@
+{
+  "source": "Written for this suite to match INJECTION_PATTERNS entries 3 and 6; they guard the harness rather than probe the defense",
+  "source_url": "https://github.com/codepath/pathreview-ai301-fa26-s1/issues/29",
+  "payloads": [
+    {
+      "id": "template-injection",
+      "payload": "{{ config.items() }}",
+      "note": "matches the template-injection pattern; also the one payload here that sanitize() rewrites"
+    },
+    {
+      "id": "code-execution",
+      "payload": "eval(__import__('os').system('id'))",
+      "note": "matches the code-execution pattern"
+    }
+  ]
+}
